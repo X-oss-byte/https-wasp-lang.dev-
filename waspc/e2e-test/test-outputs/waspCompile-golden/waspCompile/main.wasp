@@ -1,0 +1,11 @@
+app waspCompile {
+  wasp: {
+    version: "^0.11.3"
+  },
+  title: "waspCompile"
+}
+
+route RootRoute { path: "/", to: MainPage }
+page MainPage {
+  component: import Main from "@client/MainPage.jsx"
+}

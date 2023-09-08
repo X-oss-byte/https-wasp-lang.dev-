@@ -1,0 +1,18 @@
+{{={= =}=}}
+
+datasource db {
+  provider = "{= datasourceProvider =}"
+  url      = {=& datasourceUrl =}
+}
+
+generator client {
+  provider = "prisma-client-js"
+  output = {=& prismaClientOutputDir =}
+  {=# prismaPreviewFeatures =}
+  previewFeatures = {=& . =}
+  {=/ prismaPreviewFeatures =}
+}
+
+{=# modelSchemas =}
+{=& . =}
+{=/ modelSchemas =}
